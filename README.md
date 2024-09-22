@@ -40,4 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 - Need to configure the Webhook in the Github
 - Go to project on Coolify -> Webhook -> Webhook Manual
-- 
+- Copy and paste the 'Deploy Webhook'
