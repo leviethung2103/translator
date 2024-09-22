@@ -4,3 +4,5 @@ python-docx
 python-pptx
 deep-translator
 pymupdf
+python-dotenv
+uvicorn

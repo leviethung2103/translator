@@ -64,8 +64,6 @@ async def translate_pdf(file: UploadFile = File(...), source_language: str = "au
     with open(input_path, "wb") as f:
         f.write(await file.read())
 
-    print("Go here")
-
     pdf_translator = PDFTranslator(source_language=source_language, target_language=target_language)
     pdf_translator.translate_pdf(input_path, output_path)
 
