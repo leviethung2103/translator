@@ -15,7 +15,7 @@ const getFileIcon = (fileExtension) => {
     }
 }
 
-export default function TranslationBox({ value, onChange, charLimit, readOnly, isInput = false, targetLanguage }) {
+export default function TranslationBox({targetLanguage }) {
     const [file, setFile] = useState(null);
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -34,7 +34,6 @@ export default function TranslationBox({ value, onChange, charLimit, readOnly, i
         event.preventDefault();
         const droppedFile = event.dataTransfer.files[0];
         setFile(droppedFile);
-        // Save the file locally or handle it as needed
         console.log(droppedFile);
     };
 

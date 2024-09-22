@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef } from 'react'
 import LanguageDropdown from './components/LanguageDropdown'
-import TextArea from './components/TextArea'
 import SwapButton from './components/SwapButton'
 import DarkModeToggle from './components/DarkModeToggle'
 import TranslationBox from './components/FileUploadButton'
@@ -36,7 +35,7 @@ export default function Home() {
     }
   }
 
-  const textAreaRef = useRef(null);
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     if (textAreaRef.current) {
@@ -64,7 +63,7 @@ export default function Home() {
           placeholder="Enter text to translate"
           className="text-area"
         />
-        <TranslationBox text={outputText} language={outputLanguage} targetLanguage={outputLanguage} />
+        <TranslationBox targetLanguage={outputLanguage} />
       </div>
 
       <SwapButton onClick={handleSwap} />

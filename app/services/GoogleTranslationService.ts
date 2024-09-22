@@ -5,6 +5,6 @@ export class GoogleTranslationService implements TranslationService {
         const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURI(text)}`;
         const response = await fetch(url);
         const json = await response.json();
-        return json[0].map((item: any) => item[0]).join('');
+        return json[0].map((item: [string]) => item[0]).join('');
     }
 }
